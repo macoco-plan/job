@@ -1,0 +1,103 @@
+/*　表作成　*/
+.table {
+    border-collapse: collapse;
+}
+
+.tr ,th ,td {
+    border: solid 1px #EEB1C9;
+    padding: 10px;
+}
+
+.item  {
+    text-align: center;
+}
+
+/* プランA,B,C　文字装飾 */
+.plan {
+    padding: 5px;
+    font-size: 25px;
+    color: #F67EAB;
+
+}
+
+li {
+    list-style: none;
+}
+
+/* プラン内訳配置 */
+
+.breakdown {
+    vertical-align: top;
+}
+
+/* プランA,B,C　サービス内容項目 ● 装飾 */
+
+li::before{
+    content: '●';
+    font-size: 100%;
+    color: #F67EAB;
+}
+
+li1::before{
+    content: '●';
+    font-size: 100%;
+    color: #ffff;
+}
+
+/* 所要時間項目 ● 装飾 */
+.time::before {
+    content: '●';
+    font-size: 100%;
+    color: #F67EAB;
+}
+
+.plus {
+    text-align: center;
+}
+
+li2 {
+    font-size: 80%;
+}
+
+.smalltext {
+    font-size: 80%;
+}
+
+/*  初期費用　記載内容*/
+li4 {
+    text-align: left;
+}
+
+.bigtext {
+    font-size: 130%;
+}
+
+.bigtext2 {
+    font-size: 130%;
+    font-weight: bold;
+}
+
+/* 初期費用　装飾 */
+.cost {
+    background-color: #E51C65;
+    color: #ffff;
+}
+
+/* オススメ　装飾 */
+.recommendation {
+    background-color: #E51C65;
+    color: #ffff;
+}
+li5 {
+    font-size: 80%;
+}
+
+li4::before {
+    content: '●';
+    font-size: 100%;
+    color: #ffff;
+}
+
+li6 {
+    text-align: left;
+}
