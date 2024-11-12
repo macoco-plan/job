@@ -1,4 +1,4 @@
-/*　表作成　*/
+/*  表枠組み  */
 table.table-plans {
     border-collapse: collapse;
     border: solid 1px #EEB1C9;
@@ -10,92 +10,141 @@ table.table-plans td {
     border: solid 1px #EEB1C9;
 }
 
-/* 表1列目文字の中央よせ */
+/* 1列目 縦列項目の中央よせ */
 .item  {
     text-align: center;
 }
 
-/* 「プランA,B,C」文字装飾 */
+/* 1行目文字「プランA~C」文字装飾 */
 .plan {
     padding: 5px;
     font-size: 25px;
     color: #F67EAB;
 }
 
+/* ２行目リスト要素「・」非表示 */
 table.table-plans li {
     list-style: none;
 }
 
-/* プランA,B,C　サービス内容全体の配置位置　上揃え */
-.breakdown {
-    vertical-align: top;
+/* ２行目プランA,B,C サービス内容全体の配置位置 左よせ上よせ */
+.parent-list {
+    padding-left: 0;
+    padding-top: 0;
 }
 
-/* プランA,B,C　サービス内容項目 ● 装飾 */
+/* 2行目オススメ 左よせ */
+.parent-recommendation {
+    padding-left: 0;
+}
+
+/* ２行目 文字サイズ小設定 */
+.child-list , .child-recommendation {
+    font-size: 80%;
+}
+
+/* ２行目 プランA,B,C サービス内容項目 ● 装飾 */
 /* ピンク丸 */
-li::before{
+.parent-list > li::before {
     content: '●';
     font-size: 100%;
     color: #F67EAB;
 }
 /* 白丸 */
-li1::before{
+.parent-recommendation::before{
     content: '●';
     font-size: 100%;
     color: #ffff;
 }
 
-/* プラン内容「＋」文字　中央よせ */
-.plus {
-    text-align: center;
+/* 2行目 [オススメ] 背景ピンク＋文字白 */
+.recommendation {
+    background-color: #E51C65;
+    color: #ffff;
 }
 
-/* 所要時間項目 ● 装飾 */
+/* 2行目 [オススメ] 文字装飾 */
+.recommendation-text {
+    background-color: #ffff;
+    color: #E51C65;
+    border: solid 1px;
+    border-color: #000;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 130%;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 40px;
+    position: absolute;
+    top: 320px;
+    right: 200px;
+}
+
+/* ３行目 所要時間項目 ● 装飾 */
 .time::before {
     content: '●';
     font-size: 100%;
     color: #F67EAB;
 }
 
-/* 文字　小サイズ設定 */
-li2 {
-    font-size: 80%;
-}
-
-/* 文字　小サイズ設定 */
+/* 3行目 文字サイズ 小設定 */
 .smalltext {
     font-size: 80%;
 }
 
-/* 初期費用　キャンペーン記載情報　左よせ　 */
-div {
-    text-align: left;
+/* 4行目以降 文字中央よせ */
+.line > div {
+    text-align: center;
 }
 
-/* 初期費用　アクセント大文字設定 */
-.bigtext {
-    font-size: 130%;
-}
-
-/* 初期費用　アクセント大文字設定 */
-.bigtext2 {
-    font-size: 130%;
-    font-weight: bold;
-}
-
-/* 初期費用　背景ピンク＋文字白 */
+/* 7行目 初期費用 背景ピンク＋文字白 */
 .cost {
     background-color: #E51C65;
     color: #ffff;
 }
 
-/* オススメ　背景ピンク＋文字白 */
-.recommendation {
-    background-color: #E51C65;
-    color: #ffff;
+/* 7行目 初期費用 金額 中央よせ  */
+.cost > .money {
+    text-align: center;
 }
 
-/* オススメ　まる囲み文字装飾 　class設定できてない　今liのみ　*/
+/* 7行目 初期費用 キャンペーン日付 中央よせ  */
+.cost > .day {
+    text-align: center;
+}
 
-/* 8/31 吹き出し風　文字装飾 設定きてない　今liのみ　*/
+/* 7行目 初期費用 キャンペーン記載情報 左よせ  */
+.cost > div {
+    margin-left: 20px;
+}
 
+/* 7行目 初期費用 アクセント大文字設定 */
+.bigtext {
+    font-size: 130%;
+}
+
+/* 7行目 初期費用 アクセント大文字 太文字設定 */
+.bigtext2 {
+    font-size: 130%;
+    font-weight: bold;
+}
+
+
+/* 8/31 吹き出し風 文字装飾 */
+.day {
+    background-color: #ffff;
+    color: #E51C65;
+    border: solid 1px;
+    border-color: #000;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 150%;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 40px;
+    position: absolute;
+    top: 750px;
+    right: 200px;
+}
