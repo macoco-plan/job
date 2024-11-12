@@ -61,6 +61,7 @@ table.table-plans li {
 .recommendation {
     background-color: #E51C65;
     color: #ffff;
+    position: relative;
 }
 
 /* 2行目 [オススメ] 文字装飾 */
@@ -76,8 +77,8 @@ table.table-plans li {
     text-align: center;
     border-radius: 40px;
     position: absolute;
-    top: 320px;
-    right: 200px;
+    top: -10px;
+    right: 100px;
 }
 
 /* ３行目 所要時間項目 ● 装飾 */
@@ -101,6 +102,7 @@ table.table-plans li {
 .cost {
     background-color: #E51C65;
     color: #ffff;
+    position: relative;
 }
 
 /* 7行目 初期費用 金額 中央よせ  */
@@ -115,7 +117,7 @@ table.table-plans li {
 
 /* 7行目 初期費用 キャンペーン記載情報 左よせ  */
 .cost > div {
-    margin-left: 20px;
+    margin-left: 100px;
 }
 
 /* 7行目 初期費用 アクセント大文字設定 */
@@ -130,7 +132,7 @@ table.table-plans li {
 }
 
 
-/* 8/31 吹き出し風 文字装飾 */
+/* 7行目 8/31 吹き出し風 文字装飾 */
 .day {
     background-color: #ffff;
     color: #E51C65;
@@ -145,6 +147,6 @@ table.table-plans li {
     text-align: center;
     border-radius: 40px;
     position: absolute;
-    top: 750px;
-    right: 200px;
+    top: 10px;
+    right: 100px;
 }
