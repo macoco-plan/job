@@ -1,47 +1,53 @@
 /*　表作成　*/
-.table {
+table.table-plans {
     border-collapse: collapse;
-}
-
-.tr ,th ,td {
     border: solid 1px #EEB1C9;
-    padding: 10px;
 }
 
+table.table-plans th,
+table.table-plans td {
+    padding: 10px;
+    border: solid 1px #EEB1C9;
+}
+
+/* 表1列目文字の中央よせ */
 .item  {
     text-align: center;
 }
 
-/* プランA,B,C　文字装飾 */
+/* 「プランA,B,C」文字装飾 */
 .plan {
     padding: 5px;
     font-size: 25px;
     color: #F67EAB;
-
 }
 
-li {
+table.table-plans li {
     list-style: none;
 }
 
-/* プラン内訳配置 */
-
+/* プランA,B,C　サービス内容全体の配置位置　上揃え */
 .breakdown {
     vertical-align: top;
 }
 
 /* プランA,B,C　サービス内容項目 ● 装飾 */
-
+/* ピンク丸 */
 li::before{
     content: '●';
     font-size: 100%;
     color: #F67EAB;
 }
-
+/* 白丸 */
 li1::before{
     content: '●';
     font-size: 100%;
     color: #ffff;
+}
+
+/* プラン内容「＋」文字　中央よせ */
+.plus {
+    text-align: center;
 }
 
 /* 所要時間項目 ● 装飾 */
@@ -51,53 +57,45 @@ li1::before{
     color: #F67EAB;
 }
 
-.plus {
-    text-align: center;
-}
-
+/* 文字　小サイズ設定 */
 li2 {
     font-size: 80%;
 }
 
+/* 文字　小サイズ設定 */
 .smalltext {
     font-size: 80%;
 }
 
-/*  初期費用　記載内容*/
-li4 {
+/* 初期費用　キャンペーン記載情報　左よせ　 */
+div {
     text-align: left;
 }
 
+/* 初期費用　アクセント大文字設定 */
 .bigtext {
     font-size: 130%;
 }
 
+/* 初期費用　アクセント大文字設定 */
 .bigtext2 {
     font-size: 130%;
     font-weight: bold;
 }
 
-/* 初期費用　装飾 */
+/* 初期費用　背景ピンク＋文字白 */
 .cost {
     background-color: #E51C65;
     color: #ffff;
 }
 
-/* オススメ　装飾 */
+/* オススメ　背景ピンク＋文字白 */
 .recommendation {
     background-color: #E51C65;
     color: #ffff;
 }
-li5 {
-    font-size: 80%;
-}
 
-li4::before {
-    content: '●';
-    font-size: 100%;
-    color: #ffff;
-}
+/* オススメ　まる囲み文字装飾 　class設定できてない　今liのみ　*/
 
-li6 {
-    text-align: left;
-}
+/* 8/31 吹き出し風　文字装飾 設定きてない　今liのみ　*/
+
