@@ -4,196 +4,200 @@
         <title>表サンプル</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="line-test.css">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
     </head>
     <body>
-        <table class="table-plans">
-            <tr><!--   1行目  -->
-                <th> </th>
-                <th class="plan">プランA</th>
-                <th class="plan">プランB</th>
-                <th class="plan">プランC</th>
-            </tr>
-            <tr><!--   2行目 サービス内容   -->
-                <td rowspan="2" class="item">サービス内容</td>
-                <!-- プランA内容   -->
-                <td rowspan="2">
-                    <ul class="parent-list">
-                        <li>エクササイズ
-                            <ul class="child-list">
-                                <li>・コンディショニング(柔軟)<br>
-                                    (柔軟またはヨガマット)</li>
-                                <li>+</li>
-                                <li>・リズミックエクササイズ(30分)</li>
-                            </ul>
-                        </li>
-                        <li>笑顔の作り方セミナー
-                            <ul class="child-list">
-                                <li>(20分)</li>
-                            </ul>
-                        </li>
-                        <li>毎日のレッスン
-                            <ul class="child-list">
-                                <li>・YouTube(マニュアル付き)</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </td>
-                <!--   プランB   -->
-                <td rowspan="2">
-                    <ul class="parent-list">
-                        <li>エクササイズ
-                            <ul class="child-list">
-                                <li>・コンディショニング(15分)
-                                <br>   (柔軟またはヨガマット)</li>
-                                <li>+</li>
-                                <li>・リズミックエクササイズ(45分)</li>
-                            </ul>
-                        </li>
-                        <li>笑顔の作り方セミナー
-                            <ul class="child-list">
-                                <li>(30分)</li>
-                            </ul>
-                        </li>
-                        <li>毎日のレッスン
-                            <ul class="child-list">
-                                <li>・YouTube(マニュアル付き)</li>
-                                <li>・笑顔ワンポイントアドバイス</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </td>
-                <!--   プランC   -->
-                <td>
-                    <ul class="parent-list">
-                        <li>エクササイズ
-                            <ul class="child-list">
-                                <li>・コンディショニング(15分)<br>
-                                    (柔軟またはヨガマット)</li>
-                                <li>+</li>
-                                <li>・リズミックエクササイズ(45分)</li>
-                            </ul>
-                        </li>
-                        <li>笑顔の作り方セミナー
-                            <ul class="child-list">
-                                <li>(30分)</li>
-                            </ul>
-                        </li>
-                        <li>毎日のレッスン
-                            <ul class="child-list">
-                                <li>・YouTube(マニュアル付き)</li>
-                                <li>・笑顔ワンポイントアドバイス</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </td>
-            </tr> <!-- 2'行目オススメ内容-->
-            <tr>
-                <td class="recommendation">
-                    <ul>
-                        <li>
-                            <div class="recommendation-text">オススメ</div>
-                            <ul class="parent-recommendation">笑顔コンサルティング
-                                <ul class="child-recommendation">
-                                    <li> (個別対応)</li>
-                                    <li>一人ひとりに合った笑顔の作り方、</li>
-                                    <li>笑顔を作るためのトレーニング法の指導</li>
+        <div class="table-plans-wrapper">
+            <table class="table-plans">
+                <tr><!--   1行目  -->
+                    <th> </th>
+                    <th class="plan">プランA</th>
+                    <th class="plan">プランB</th>
+                    <th class="plan">プランC</th>
+                </tr>
+                <tr><!--   2行目 サービス内容   -->
+                    <td rowspan="2" class="item">サービス内容</td>
+                    <!-- プランA内容   -->
+                    <td rowspan="2" class="plan-list">
+                        <ul class="parent-list">
+                            <li>エクササイズ
+                                <ul class="child-list">
+                                    <li>・コンディショニング(柔軟)</li>
+                                    <li class="text-position">(柔軟またはヨガマット)</li>
+                                    <li class="text-center">+</li>
+                                    <li>・リズミックエクササイズ(30分)</li>
                                 </ul>
-                            </ul>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-            <tr><!--   3行目 所要時間   -->
-                <td>
-                    <div class="item">所要時間</div>
-                    <div class="smalltext">(5名以上の場合)</div>
-                </td>
-                <td>
-                    <div class="time">60分〜</div>
-                    <div class="smalltext"> (休憩含む)</div>
-                </td>
-                <td>
-                    <div class="time">90分〜</div>
-                    <div class="smalltext"> (休憩含む)</div>
-                </td>
-                <td>
-                    <div class="time">120分〜</div>
-                    <div class="smalltext"> (休憩含む)</div>
-                </td>
-            </tr>
+                            </li>
+                            <li>笑顔の作り方セミナー
+                                <ul class="child-list">
+                                    <li class="text-position">(20分)</li>
+                                </ul>
+                            </li>
+                            <li>毎日のレッスン
+                                <ul class="child-list">
+                                    <li>・YouTube(マニュアル付き)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </td>
+                    <!--   プランB   -->
+                    <td rowspan="2" class="plan-list">
+                        <ul class="parent-list">
+                            <li>エクササイズ
+                                <ul class="child-list">
+                                    <li>・コンディショニング(15分)</li>
+                                    <li class="text-position">(柔軟またはヨガマット)</li>
+                                    <li class="text-center">+</li>
+                                    <li>・リズミックエクササイズ(45分)</li>
+                                </ul>
+                            </li>
+                            <li>笑顔の作り方セミナー
+                                <ul class="child-list">
+                                    <li class="text-position">(30分)</li>
+                                </ul>
+                            </li>
+                            <li>毎日のレッスン
+                                <ul class="child-list">
+                                    <li>・YouTube(マニュアル付き)</li>
+                                    <li>・笑顔ワンポイントアドバイス</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </td>
+                    <!--   プランC   -->
+                    <td  class="plan-list">
+                        <ul class="parent-list">
+                            <li>エクササイズ
+                                <ul class="child-list">
+                                    <li>・コンディショニング(15分)</li>
+                                    <li class="text-position">(柔軟またはヨガマット)</li>
+                                    <li class="text-center">+</li>
+                                    <li>・リズミックエクササイズ(45分)</li>
+                                </ul>
+                            </li>
+                            <li>笑顔の作り方セミナー
+                                <ul class="child-list">
+                                    <li class="text-position">(30分)</li>
+                                </ul>
+                            </li>
+                            <li>毎日のレッスン
+                                <ul class="child-list">
+                                    <li>・YouTube(マニュアル付き)</li>
+                                    <li>・笑顔ワンポイントアドバイス</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr> <!-- 2'行目オススメ内容-->
+                    <td class="recommendation">
+                        <div class="recommendation-text">オススメ</div>
+                        <ul>
+                            <li>
+                                <ul class="parent-recommendation">笑顔コンサルティング
+                                    <ul class="child-recommendation">
+                                        <li>(個別対応)</li>
+                                        <li>一人ひとりに合った笑顔の作り方、</li>
+                                        <li>笑顔を作るためのトレーニング法の指導</li>
+                                    </ul>
+                                </ul>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr><!--   3行目 所要時間   -->
+                    <td>
+                        <div class="item">所要時間</div>
+                        <div class="smalltext">(5名以上の場合)</div>
+                    </td>
+                    <td>
+                        <div class="time">60分〜</div>
+                        <div class="smalltext"> (休憩含む)</div>
+                    </td>
+                    <td>
+                        <div class="time">90分〜</div>
+                        <div class="smalltext">(休憩含む)</div>
+                    </td>
+                    <td>
+                        <div class="time">120分〜</div>
+                        <div class="smalltext">(休憩含む)</div>
+                    </td>
+                </tr>
+    
+                <tr><!--   4行目 参加人数   -->
+                    <td class="item">参加人数</td>
+                    <td colspan="3" class="line">
+                        <div>5名以上</div>
+                        <div class="smalltext">(オプションで100名まで追加可能)</div>
+                    </td>
+                </tr>
+    
+                <tr><!--   5行目 期間   -->
+                    <td class="item">期間</td>
+                    <td colspan="3" class="line">
+                        <div>3か月間</div>
+                    </td>
+                </tr>
+    
+                <tr><!--   6行目 訪問回数   -->
+                    <td class="item">訪問回数</td>
+                    <td colspan="2" class="line">
+                        <div>6回(月2回)</div>
+                    </td>
+                    <td class="line">
+                        <div>6回(月2回)</div>
+                        <div>+</div>
+                        <div>調査訪問2回</div>
+                    </td>
+                </tr>
+    
+                <tr><!--   7行目 初期費用   -->
+                    <td class="item">初期費用</td>
+                    <td colspan="3" class="cost">
+                        <div class="money">100,000円</div>
+                        <div class="day">8/31<span class="smalltext">まで</span></div>
+                        <div>毎月<span class="bigtext">10</span>社限定初期費用<span class="bigtext2">3</span>0,000円！<br>
+                        ModeAd(モデアド)エクササイズープニングキャンペーン実施中</div>
+                    </td>
+                </tr>
+    
+                <tr><!--   8行目 料金月額   -->
+                    <td class="item">
+                        <div>料金月額</div>
+                        <div class="smalltext">(5名ご利用時の単価)</div>
+                    </td>
+                    <td class="line">
+                        <div>100,000円</div>
+                        <div class="smalltext">1人1レッスン辺り10,000円</div>
+                    </td>
+                    <td class="line">
+                        <div>120,000円</div>
+                        <div class="smalltext">1人1レッスン辺り12,000円</div>
+                    </td>
+                    <td class="line">
+                        <div>200,000円</div>
+                        <div class="smalltext">1人1レッスン辺り20,000円</div>
+                    </td>
+                </tr>
+    
+                <tr><!--   9行目 1名追加料金   -->
+                    <td class="item">
+                        <div>1名追加料金</div>
+                        <div class="smalltext">1人1レッスン辺り</div>
+                    </td>
+                    <td class="line">
+                        <div>5,000円〜</div>
+                    </td>
+                    <td class="line">
+                        <div>6,000円〜</div>
+                    </td>
+                    <td class="line">
+                        <div>15,000円〜</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
 
-            <tr><!--   4行目 参加人数   -->
-                <td class="item">参加人数</td>
-                <td colspan="3" class="line">
-                    <div>5名以上</div>
-                    <div class="smalltext">(オプションで100名まで追加可能)</div>
-                </td>
-            </tr>
-
-            <tr><!--   5行目 期間   -->
-                <td class="item">期間</td>
-                <td colspan="3" class="line">
-                    <div>3か月間</div>
-                </td>
-            </tr>
-
-            <tr><!--   6行目 訪問回数   -->
-                <td class="item">訪問回数</td>
-                <td colspan="2" class="line">
-                    <div>6回(月2回)</div>
-                </td>
-                <td class="line">
-                    <div>6回(月2回)</div>
-                    <div>+</div>
-                    <div>調査訪問2回</div>
-                </td>
-            </tr>
-
-            <tr><!--   7行目 初期費用   -->
-                <td class="item">初期費用</td>
-                <td colspan="3" class="cost">
-                    <div class="money">100,000円</div>
-                    <div class="day">8/31<span class="smalltext">まで</span></div>
-                    <div>毎月<span class="bigtext">10</span>社限定初期費用<span class="bigtext2">3</span>0,000円！<br>
-                    ModeAd(モデアド)エクササイズープニングキャンペーン実施中</div>
-                </td>
-            </tr>
-
-            <tr><!--   8行目 料金月額   -->
-                <td class="item">
-                    <div>料金月額</div>
-                    <div class="smalltext">(5名ご利用時の単価)</div>
-                </td>
-                <td class="line">
-                    <div>100,000円</div>
-                    <div class="smalltext">1人1レッスン辺り10,000円</div>
-                </td>
-                <td class="line">
-                    <div>120,000円</div>
-                    <div class="smalltext">1人1レッスン辺り12,000円</div>
-                </td>
-                <td class="line">
-                    <div>200,000円</div>
-                    <div class="smalltext">1人1レッスン辺り20,000円</div>
-                </td>
-            </tr>
-
-            <tr><!--   9行目 1名追加料金   -->
-                <td class="item">
-                    <div>1名追加料金</div>
-                    <div class="smalltext">1人1レッスン辺り</div>
-                </td>
-                <td class="line">
-                    <div>5,000円〜</div>
-                </td>
-                <td class="line">
-                    <div>6,000円〜</div>
-                </td>
-                <td class="line">
-                    <div>15,000円〜</div>
-                </td>
-            </tr>
-        </table>
     </body>
 </html>
 

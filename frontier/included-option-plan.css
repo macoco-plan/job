@@ -1,0 +1,39 @@
+/*  表枠組み  */
+table.table-included,
+table.table-option {
+    border-collapse: collapse;
+    border: solid 1px #EEB1C9;
+}
+
+table.table-included td,
+table.table-option td {
+    padding: 10px;
+    border: solid 1px #EEB1C9;
+}
+
+/* リスト要素「・」非表示 */
+table.table-included li,
+table.table-option li {
+    list-style: none;
+}
+
+/* 文字サイズ 小設定 */
+.smalltext {
+    font-size: 80%;
+}
+
+/* オプション表文字 中央揃え */
+table.table-option li {
+    text-align: center;
+}
+
+/* オプション表文字 文字左揃え */
+table.table-option td {
+    text-align: left;
+}
+
+/* オプション表 空白調整 */
+table.table-option li {
+    padding-left: 30px;
+    padding-right: 30px;
+}

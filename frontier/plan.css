@@ -1,0 +1,45 @@
+/*  表枠組み  */
+table.table-plan-try {
+    border-collapse: collapse;
+    border: solid 1px #EEB1C9;
+}
+
+table.table-plan-try td {
+    padding: 10px;
+    border: solid 1px #EEB1C9;
+}
+
+/* リスト要素「・」非表示 */
+table.table-plan-try li {
+    list-style: none;
+}
+
+/* サービス内容項目 ● 装飾 */
+/* ピンク丸 */
+.pink-dot::before {
+    content: '●';
+    font-size: 100%;
+    color: #F67EAB;
+}
+
+/* 空白調整 */
+.money {
+    font-size: 150%;
+    padding-left: 30px;
+    padding-right: 0;
+}
+
+/* 文字サイズ 小設定 */
+.smalltext-money {
+    font-size: 80%;
+    padding-right: 30px;
+}
+
+/* 2行目 文字中央よせ */
+.text-center {
+    text-align: center;
+}
+
+.try ul, li {
+    padding-right: 100px;
+}

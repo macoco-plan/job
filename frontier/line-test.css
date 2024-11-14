@@ -27,10 +27,21 @@ table.table-plans li {
     list-style: none;
 }
 
-/* ２行目プランA,B,C サービス内容全体の配置位置 左よせ上よせ */
+/* ２行目プランA,B,C サービス内容全体の配置位置 上よせ */
+.plan-list {
+    vertical-align: top;
+    padding-left: 0;
+}
+
+/* ２行目プランA,B,C サービス内容全体の配置位置 左よせ */
+.child-list {
+    padding-left: 0;
+    font-size: 80%;
+}
+
+/* ２行目プランA,B,C サービス内容全体の配置位置 左よせ */
 .parent-list {
     padding-left: 0;
-    padding-top: 0;
 }
 
 /* 2行目オススメ 左よせ */
@@ -39,8 +50,18 @@ table.table-plans li {
 }
 
 /* ２行目 文字サイズ小設定 */
-.child-list , .child-recommendation {
+.child-recommendation {
     font-size: 80%;
+    padding-left: 0;
+}
+
+/* 2行目 文字中央よせ */
+.text-center {
+    text-align: center;
+}
+
+.text-position {
+    padding-left: 10px;
 }
 
 /* ２行目 プランA,B,C サービス内容項目 ● 装飾 */
@@ -62,23 +83,44 @@ table.table-plans li {
     background-color: #E51C65;
     color: #ffff;
     position: relative;
+    padding-left: 0 !important;
+    padding-top: 30px !important;
 }
 
 /* 2行目 [オススメ] 文字装飾 */
-.recommendation-text {
+table.table-plans .recommendation-text {
     background-color: #ffff;
     color: #E51C65;
     border: solid 1px;
     border-color: #000;
     padding-left: 30px;
     padding-right: 30px;
-    font-size: 130%;
     font-weight: bold;
     text-align: center;
     border-radius: 40px;
     position: absolute;
     top: -10px;
-    right: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+
+/* [オススメ] 文字装飾 メディアクエリ設定 768px以下 */
+/* スクロールして表示する */
+@media screen and (max-width: 768px) {
+    .table-plans-wrapper {
+        overflow-x: scroll;
+    }
+    /* 表の幅を固定してしまう */
+    .table-plans {
+        width: 700px;
+    }
+
+    /* セル内のテキストを改行しない設定
+    .table-plans td, .table-plans th {
+        white-space: nowrap;
+    }*/
 }
 
 /* ３行目 所要時間項目 ● 装飾 */
@@ -115,11 +157,6 @@ table.table-plans li {
     text-align: center;
 }
 
-/* 7行目 初期費用 キャンペーン記載情報 左よせ  */
-.cost > div {
-    margin-left: 100px;
-}
-
 /* 7行目 初期費用 アクセント大文字設定 */
 .bigtext {
     font-size: 130%;
@@ -133,7 +170,7 @@ table.table-plans li {
 
 
 /* 7行目 8/31 吹き出し風 文字装飾 */
-.day {
+table.table-plans .day {
     background-color: #ffff;
     color: #E51C65;
     border: solid 1px;
@@ -147,6 +184,13 @@ table.table-plans li {
     text-align: center;
     border-radius: 40px;
     position: absolute;
-    top: 10px;
-    right: 100px;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    /* 関数は要素をY軸方向へ並行移動するための関数 */
+}
+
+table.table-plans .cost {
+    padding-right: 200px !important;
+    /* 最優先 */
 }
