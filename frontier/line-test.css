@@ -1,6 +1,9 @@
+/*  */
+/* 共通css */
+
 /*  表枠組み  */
 table.table-plans,
-table.table-plan-try,
+table.table-plans-try,
 table.table-included,
 table.table-option {
     border-collapse: collapse;
@@ -9,31 +12,77 @@ table.table-option {
 
 table.table-plans th,
 table.table-plans td,
-table.table-plan-try td,
+table.table-plans-try td,
 table.table-included td,
 table.table-option td {
     padding: 10px;
     border: solid 1px #EEB1C9;
 }
 
-/* 1列目 縦列項目の中央よせ */
-.item  {
-    text-align: center;
-}
-
-/* 1行目文字「プランA~C」文字装飾 */
-.plan {
-    padding: 5px;
-    font-size: 25px;
-    color: #F67EAB;
-}
-
 /* リスト要素「・」非表示 */
 table.table-plans li,
-table.table-plan-try li,
+table.table-plans-try li,
 table.table-included li,
 table.table-option li {
     list-style: none;
+}
+
+/* 文字中央よせ */
+.text-center,
+.line > div,
+table.table-option li,
+.cost > .day,
+.line > div,
+table.table-option li {
+    text-align: center;
+}
+
+
+/* 文字中央よせ */
+.text-center, .money-plans, .money, .smalltext-money {
+    text-align: center !important;
+}
+
+
+/* 文字サイズ 小設定 */
+.smalltext,
+.smalltext-money {
+    font-size: 80%;
+}
+
+/*  */
+/* メディアクエリ設定 768px以下 */
+/* スクロールして表示する */
+@media screen and (max-width: 768px) {
+    .table-plans-wrapper {
+        overflow-x: scroll;
+    }
+
+    /* セル内のテキストを改行しない設定*/
+    .table-plans td,
+    .table-plans th,
+    .table-included td,
+    .table-option,
+    .table-plans-try td {
+        white-space: nowrap;
+    }
+
+    /* 表の幅を固定してしまう
+    .table-plans {
+        width: 700px;
+    }*/
+
+}
+
+
+/*  */
+/* プランABC一覧表 */
+
+/* 1行目文字「プランA~C」文字装飾 */
+.plan {
+    text-align: center;
+    font-size: 25px;
+    color: #F67EAB;
 }
 
 /* ２行目プランA,B,C サービス内容全体の配置位置 上よせ */
@@ -42,15 +91,15 @@ table.table-option li {
     padding-left: 0;
 }
 
-/* ２行目プランA,B,C サービス内容全体の配置位置 左よせ */
+/* ２行目プランA,B,C サービス内容全体の配置位置 左よせ(親要素) */
+.parent-list {
+    padding-left: 0;
+}
+
+/* ２行目プランA,B,C サービス内容全体の配置位置 左よせ(子要素) */
 .child-list {
     padding-left: 0;
     font-size: 80%;
-}
-
-/* ２行目プランA,B,C サービス内容全体の配置位置 左よせ */
-.parent-list {
-    padding-left: 0;
 }
 
 /* 2行目オススメ 左よせ */
@@ -62,11 +111,6 @@ table.table-option li {
 .child-recommendation {
     font-size: 80%;
     padding-left: 0;
-}
-
-/* 2行目 文字中央よせ */
-.text-center {
-    text-align: center;
 }
 
 .text-position {
@@ -115,41 +159,11 @@ table.table-plans .recommendation-text {
     white-space: nowrap;
 }
 
-
-/* [オススメ] 文字装飾 メディアクエリ設定 768px以下 */
-/* スクロールして表示する */
-@media screen and (max-width: 768px) {
-    .table-plans-wrapper {
-        overflow-x: scroll;
-    }
-    /* 表の幅を固定してしまう
-    .table-plans {
-        width: 700px;
-    }*/
-
-    /* セル内のテキストを改行しない設定*/
-    .table-plans td, .table-plans th {
-        white-space: nowrap;
-    }
-}
-
 /* ３行目 所要時間項目 ● 装飾 */
 .time::before {
     content: '●';
     font-size: 100%;
     color: #F67EAB;
-}
-
-/* 3行目 文字サイズ 小設定 */
-.smalltext,
-.smalltext-money {
-    font-size: 80%;
-}
-
-/* 4行目以降 文字中央よせ */
-.line > div,
-table.table-option li, {
-    text-align: center;
 }
 
 /* 7行目 初期費用 背景ピンク＋文字白 */
@@ -164,11 +178,6 @@ table.table-option li, {
     text-align: center;
 }
 
-/* 7行目 初期費用 キャンペーン日付 中央よせ  */
-.cost > .day {
-    text-align: center;
-}
-
 /* 7行目 初期費用 アクセント大文字設定 */
 .bigtext {
     font-size: 130%;
@@ -179,7 +188,6 @@ table.table-option li, {
     font-size: 130%;
     font-weight: bold;
 }
-
 
 /* 7行目 8/31 吹き出し風 文字装飾 */
 table.table-plans .day {
@@ -202,28 +210,21 @@ table.table-plans .day {
     /* 関数は要素をY軸方向へ並行移動するための関数 */
 }
 
+/*  */
+/* プランに含まれるものリスト */
+
 table.table-plans .cost {
-    padding-right: 200px !important;
-    /* 最優先 */
+    padding-right: 200px !important; /* 最優先 */
 }
 
-/* 空白調整 */
-.money {
-    font-size: 150%;
-}
-
-/* 文字中央よせ */
-.text-center, .money-plan, .money, .smalltext-money {
-    text-align: center;
-}
-
-.try ul, li {
+/*
+li {
     padding-right: 100px;
-}
+} */
 
-.money-plan {
-    text-align: center;
-}
+
+/*  */
+/* オプション表 */
 
 /* オプション表文字 文字左揃え */
 table.table-option td {
@@ -231,7 +232,26 @@ table.table-option td {
 }
 
 /* オプション表 空白調整 */
-table.table-option li {
+table.table-option td {
     padding-left: 30px;
     padding-right: 30px;
+}
+
+
+
+/*  */
+/* 期間限定サービス価格 */
+
+.money-menu {
+    padding-left: 10px !important;
+    padding-right: 40px !important;
+}
+
+/* 文字サイズ　大きくする */
+.money {
+    font-size: 150%;
+}
+
+.table-plans-try {
+    background-color: #ffff;
 }
