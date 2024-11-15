@@ -1,11 +1,17 @@
 /*  表枠組み  */
-table.table-plans {
+table.table-plans,
+table.table-plan-try,
+table.table-included,
+table.table-option {
     border-collapse: collapse;
     border: solid 1px #EEB1C9;
 }
 
 table.table-plans th,
-table.table-plans td {
+table.table-plans td,
+table.table-plan-try td,
+table.table-included td,
+table.table-option td {
     padding: 10px;
     border: solid 1px #EEB1C9;
 }
@@ -22,8 +28,11 @@ table.table-plans td {
     color: #F67EAB;
 }
 
-/* ２行目リスト要素「・」非表示 */
-table.table-plans li {
+/* リスト要素「・」非表示 */
+table.table-plans li,
+table.table-plan-try li,
+table.table-included li,
+table.table-option li {
     list-style: none;
 }
 
@@ -66,7 +75,8 @@ table.table-plans li {
 
 /* ２行目 プランA,B,C サービス内容項目 ● 装飾 */
 /* ピンク丸 */
-.parent-list > li::before {
+.parent-list > li::before,
+.pink-dot::before {
     content: '●';
     font-size: 100%;
     color: #F67EAB;
@@ -112,15 +122,15 @@ table.table-plans .recommendation-text {
     .table-plans-wrapper {
         overflow-x: scroll;
     }
-    /* 表の幅を固定してしまう */
+    /* 表の幅を固定してしまう
     .table-plans {
         width: 700px;
-    }
+    }*/
 
-    /* セル内のテキストを改行しない設定
+    /* セル内のテキストを改行しない設定*/
     .table-plans td, .table-plans th {
         white-space: nowrap;
-    }*/
+    }
 }
 
 /* ３行目 所要時間項目 ● 装飾 */
@@ -131,12 +141,14 @@ table.table-plans .recommendation-text {
 }
 
 /* 3行目 文字サイズ 小設定 */
-.smalltext {
+.smalltext,
+.smalltext-money {
     font-size: 80%;
 }
 
 /* 4行目以降 文字中央よせ */
-.line > div {
+.line > div,
+table.table-option li, {
     text-align: center;
 }
 
@@ -193,4 +205,33 @@ table.table-plans .day {
 table.table-plans .cost {
     padding-right: 200px !important;
     /* 最優先 */
+}
+
+/* 空白調整 */
+.money {
+    font-size: 150%;
+}
+
+/* 文字中央よせ */
+.text-center, .money-plan, .money, .smalltext-money {
+    text-align: center;
+}
+
+.try ul, li {
+    padding-right: 100px;
+}
+
+.money-plan {
+    text-align: center;
+}
+
+/* オプション表文字 文字左揃え */
+table.table-option td {
+    text-align: left;
+}
+
+/* オプション表 空白調整 */
+table.table-option li {
+    padding-left: 30px;
+    padding-right: 30px;
 }
